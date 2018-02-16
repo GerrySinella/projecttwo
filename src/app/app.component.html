@@ -1,21 +1,115 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<!--<ul>-->
+<!--<li><a routerLink="" routerLinkActive="active">Home</a></li>-->
+<!--<li><a routerLink="about/48" routerLinkActive="active">About</a></li>-->
+<!--</ul>-->
+<div class="site-outer">
+    <nav class="navbar navbar-fixed-top">
+        <section class="container-fluid">
+            <div class="row">
+                <div class="container-menu">
+                    <nav class="menu" id="hb">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </nav>
+    <div class="site-inner">
+        <section class="container-fluid">
+
+            <div class="row">
+                <ul class="accordion-group col-12" id="accordion">
+                    <li class="row justify-content-center"
+                        style="background-image: url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=612621fd686897b4812287430c8be9db&auto=format&fit=crop&w=1352&q=80');">
+                        <div class="col-12 title_container">
+                            <h3>To Do's</h3>
+                            <button class="btn btn-info btn-add" type="button" (click)="toggleChild()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <span class="btn info fa fa-question animate-object zIndex" data-toggle="tooltipQuestion" title="Klicken Sie auf das Plus-Symbol um weitere TO DO's anzulegen"></span>
+                        </div>
+                        <div class="home-container col-12">
+                            <app-home [showMe]="showVar"></app-home>
+                        </div>
+                        <!--<section class="hidden-xs">-->
+                        <!--<article>-->
+                        <!--<p>God, I miss snowboarding...</p>-->
+                        <!--</article>-->
+                        <!--</section>-->
+
+                        <!--<ng-template #oddClicked><app-home></app-home></ng-template>-->
+                        <!--<ng-template #evenClicked>asdf</ng-template>-->
+                        <div class="accordion-overlay"></div>
+                    </li>
+                    <li class=""
+                        style="background-image: url('https://images.unsplash.com/photo-1494707924465-e1426acb48cb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d7cac606b3752d340f2c342f32536727&auto=format&fit=crop&w=1350&q=80');">
+                        <div class="accordion-overlay"></div>
+                        <h3>Clients</h3>
+                        <app-about></app-about>
+                        <!--<section class="hidden-xs">-->
+                        <!--<article>-->
+                        <!--<p>Feel free to use this template. I don't mind. As long as you mention me in the markup somewhere.-->
+                        <!--</p>-->
+                        <!--</article>-->
+                        <!--</section>-->
+                    </li>
+                    <li class=""
+                        style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5a7430d7bd5676bc7b81f2b8bf8f6a75&auto=format&fit=crop&w=1302&q=80');">
+                        <div class="accordion-overlay"></div>
+                        <h3>Accounting</h3>
+                        <!--<section class="hidden-xs">-->
+                        <!--<article>-->
+                        <!--<p>Got inspired by this design?</p>-->
+                        <!--</article>-->
+                        <!--</section>-->
+                    </li>
+                    <li class=""
+                        style="background-image: url('https://images.unsplash.com/photo-1508962914676-134849a727f0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5286d12e1a76e790bd5c8f1a2640aa7e&auto=format&fit=crop&w=1350&q=80');">
+                        <div class="accordion-overlay"></div>
+                        <h3>Tracking</h3>
+                        <!--<section class="hidden-xs">-->
+                        <!--<article>-->
+                        <!--<p>Bootstrap means Power.</p>-->
+                        <!--</article>-->
+                        <!--</section>-->
+                    </li>
+                    <!--<router-outlet></router-outlet>-->
+                </ul>
+            </div>
+
+        </section>
+    </div>
+    <div class="navigation">
+        <div class="navigation-login">
+
+            <h1 ng-bind="username"></h1>
+            <div class="navigation-login_profile"></div>
+        </div>
+        <div class="navigation-search">
+            <div id="search">
+                <input type="text" name="input" class="input" placeholder="Search"/>
+                <button type="reset" class="search" id="search-button"></button>
+            </div>
+        </div>
+        <div class="navigation-content">
+            <h3>Menu</h3>
+            <ul class="navigation-menu">
+                <li><a routerLink="" routerLinkActive="active">Home</a></li>
+                <li><a routerLink="about/48" routerLinkActive="active">To Do's</a></li>
+                <li><a href="#"><i class="beige fa fa-circle"></i> Clients</a></li>
+                <li><a href="#"><i class="orange fa fa-circle"></i> Accounting</a></li>
+                <li><a href="#"><i class="blue fa fa-circle"></i> Time tracking</a></li>
+            </ul>
+            <h3>More</h3>
+            <ul class="navigation-menu">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Info</a></li>
+                <li><a href="#">Collaboration</a></li>
+                <li><a href="#">Customer Service</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
