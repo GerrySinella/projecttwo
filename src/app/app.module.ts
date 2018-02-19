@@ -10,6 +10,11 @@ import {DataService} from './data.service';
 import {AccountComponent} from './account/account.component';
 import {TrackingComponent} from './tracking/tracking.component';
 import { LoginComponent } from './login/login.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { AppNavComponent } from './app-nav/app-nav.component';
+import { AppLoginComponent } from './login/app-login/app-login.component';
+import { TodoComponent } from './home/todo/todo.component';
+
 
 @NgModule({
     declarations: [
@@ -18,13 +23,17 @@ import { LoginComponent } from './login/login.component';
         AboutComponent,
         AccountComponent,
         TrackingComponent,
-        LoginComponent
+        LoginComponent,
+        AppNavComponent,
+        AppHeaderComponent,
+        AppLoginComponent,
+        TodoComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
     ],
     providers: [DataService],
     bootstrap: [AppComponent]

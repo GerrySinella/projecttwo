@@ -1,0 +1,15 @@
+
+<form *ngIf="showMe" class="add_todo_form">
+  <input type="text" class="txt" name="item" placeholder="TO DO..." [(ngModel)]="goalText">
+  <input type="submit" class="btn btn-info" [value]="btnText" (click)="addItem()">
+</form>
+<!--class for animating content animate-object-->
+<div class="row justify-content-center zIndex">
+  <div class="col-12 color-light" [@goals]="goals.length">
+    <p class="sm"><span><b>({{itemCount}})</b></span><span class="animate-object"> offene TO DO's.</span></p>
+    <p class="life-container btn btn-info d-block" *ngFor="let goal of goals; let i = index"
+       (click)="removeItem(i)">
+      {{ goal }}
+    </p>
+  </div>
+</div>

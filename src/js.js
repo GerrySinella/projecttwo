@@ -151,4 +151,5 @@ $("select").each(function() {
 }.call(this));
 $(document).ready(function(){
     $('[data-toggle="tooltipQuestion"]').tooltip();
+
 });

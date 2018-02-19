@@ -341,7 +341,7 @@ html {
       //margin: 6.5rem 0 0;
       transition: .2s;
     }
-    .animate-object{
+    .animate-object {
       opacity: 0;
       -webkit-transition: .4s;
       -moz-transition: .4s;
@@ -442,11 +442,11 @@ html {
 
 .home-container {
   clear: both;
-  .add_todo_form{
+  .add_todo_form {
     display: flex;
     justify-content: flex-end;
   }
-  .life-container{
+  .life-container {
     z-index: 1;
   }
 }
@@ -463,6 +463,7 @@ html {
   height: 100%;
   .transition(all 250ms ease-in-out);
   .transform(translate3d(-250px, 0, 0));
+
 
   &::-webkit-scrollbar {
     width: .6rem;
@@ -490,29 +491,55 @@ html {
   &.slide-right {
     .transform(translate3d(0, 0, 0));
   }
-
   &-login {
-    padding: 2rem;
-    line-height: 2;
+    padding: 10px;
+    /* line-height: 2; */
     border: 0;
     overflow: hidden;
     text-align: center;
+    height: 220px;
     width: 100%;
     font-size: 1.8rem;
     background-color: #a22d2c;
     font-weight: 100;
     color: #FFF;
     position: relative;
-    text-transform: uppercase;
-
-    &_profile {
+    /* text-transform: uppercase; */
+    &-name {
+      font-size: 1.5rem;
+      position: absolute;
+      text-shadow: 0px 2px 1px #000;
+      left: 5.5rem;
+      top: 0;
+      display: block;
+    }
+    &-logout {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      font-size: 0.9rem;
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      -webkit-transition: .4s;
+      -moz-transition: .4s;
+      -ms-transition: .4s;
+      -o-transition: .4s;
+      transition: .4s;
+      &:hover{
+        background: #ffffff;
+        border: 1px solid #ffffff00;
+        color: #a22d2c;
+      }
+    }
+    &-profile {
       position: absolute;
       top: auto;
-      bottom: -70%;
+      bottom: 45px;
       right: auto;
-      height: 150px;
-      width: 150px;
-      left: 2.5rem;
+      height: 120px;
+      width: 120px;
+      left: 3.5rem;
       background: beige;
       border-radius: 50%;
     }
@@ -1128,11 +1155,13 @@ html {
     .transform(rotate(360deg));
   }
 }
-.zIndex{
+
+.zIndex {
   position: relative;
   z-index: 1;
 }
-.tooltip{
+
+.tooltip {
   z-index: 1;
   position: fixed;
   visibility: visible;

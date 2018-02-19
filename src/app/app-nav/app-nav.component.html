@@ -1,0 +1,34 @@
+<div class="navigation">
+  <div class="navigation-login" *ngIf="!isUserLoggedIn">
+    <span class="navigation-login-name">{{title}}</span>
+  </div>
+  <div class="navigation-login" *ngIf="isUserLoggedIn">
+    <span class="navigation-login-name">{{title}}</span>
+    <button class="navigation-login-logout" type="submit">Abmelden</button>
+    <div class="navigation-login-profile"></div>
+  </div>
+  <div class="navigation-search">
+    <div id="search">
+      <input type="text" name="input" class="input" placeholder="Search"/>
+      <button type="reset" class="search" id="search-button"></button>
+    </div>
+  </div>
+  <div class="navigation-content">
+    <h3>Menu</h3>
+    <ul class="navigation-menu">
+      <li><a routerLink="" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="about/48" routerLinkActive="active">To Do's</a></li>
+      <li><a href="#"><i class="beige fa fa-circle"></i> Clients</a></li>
+      <li><a href="#"><i class="orange fa fa-circle"></i> Accounting</a></li>
+      <li><a href="#"><i class="blue fa fa-circle"></i> Time tracking</a></li>
+    </ul>
+    <h3>More</h3>
+    <ul class="navigation-menu">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Info</a></li>
+      <li><a href="#">Collaboration</a></li>
+      <li><a href="#">Customer Service</a></li>
+    </ul>
+  </div>
+</div>
